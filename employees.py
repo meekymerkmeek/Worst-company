@@ -49,14 +49,17 @@ class Employee(ABC):
 
     @property
     def name(self):
+        """Employee name"""
         return self.__name
 
     @property
     def manager(self):
+        """Employee manager"""
         return self.__manager
 
     @property
     def performance(self):
+        """Employee performance ranked from 0-100"""
         return self.__performance
 
     @performance.setter
@@ -65,6 +68,7 @@ class Employee(ABC):
 
     @property
     def happiness(self):
+        """Employee happiness from 0-100"""
         return self.__happiness
     @happiness.setter
     def happiness(self, value):
@@ -87,6 +91,7 @@ class Employee(ABC):
 
     @abstractmethod
     def work(self):
+        """Simulates 1 hour of work"""
         pass
 
     def interact(self, other):
