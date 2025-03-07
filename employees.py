@@ -50,6 +50,7 @@ class Employee(ABC):
     @property
     def name(self):
         return self.__name
+
     @property
     def manager(self):
         return self.__manager
@@ -77,6 +78,7 @@ class Employee(ABC):
     @property
     def salary(self):
         return self.__salary
+
     @salary.setter
     def salary(self, value):
         if value < 0:
@@ -168,6 +170,5 @@ class PermanentEmployee(Employee):
             if other.happiness > HAPPINESS_THRESHOLD\
                and self.performance >= PERM_EMPLOYEE_PERFORMANCE_THRESHOLD:
                 self.savings += MANAGER_BONUS
-            elif other.happiness < HAPPINESS_THRESHOLD:
+            elif other.happiness <= HAPPINESS_THRESHOLD:
                 self.happiness -= 1
-            
