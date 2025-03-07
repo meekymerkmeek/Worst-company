@@ -50,7 +50,6 @@ class Employee(ABC):
     @property
     def name(self):
         return self.__name
-    
     @property
     def manager(self):
         return self.__manager
@@ -75,11 +74,9 @@ class Employee(ABC):
             self.__happiness = PERCENTAGE_MIN
         else:
             self.__happiness = value
-            
     @property
     def salary(self):
         return self.__salary
-    
     @salary.setter
     def salary(self, value):
         if value < 0:
@@ -128,8 +125,6 @@ class Manager(Employee):
         else:
             self.happiness += 1
             
-
-
 class TemporaryEmployee(Employee):
     """
     A subclass of Employee representing a temporary employee.
