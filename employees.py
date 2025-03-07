@@ -65,8 +65,8 @@ class Employee(ABC):
 
     @property
     def happiness(self):
-        return self.__happiness 
-
+        return self.__happiness
+    
     @happiness.setter
     def happiness(self, value):
         if value > PERCENTAGE_MAX:
@@ -126,7 +126,7 @@ class Manager(Employee):
                 self.relationships[employee] -= 1
         else:
             self.happiness += 1
-            
+
 class TemporaryEmployee(Employee):
     """
     A subclass of Employee representing a temporary employee.
@@ -139,7 +139,6 @@ class TemporaryEmployee(Employee):
             self.happiness -= 2
         else:
             self.happiness += 1
-    
     def interact(self, other):
         super().interact(other)
         if other is self.manager:
@@ -151,7 +150,6 @@ class TemporaryEmployee(Employee):
                 self.happiness -= 5
             if self.salary == 0:
                 self.is_employed = False
-        
 
 class PermanentEmployee(Employee):
     """
