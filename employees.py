@@ -66,7 +66,6 @@ class Employee(ABC):
     @property
     def happiness(self):
         return self.__happiness
-    
     @happiness.setter
     def happiness(self, value):
         if value > PERCENTAGE_MAX:
