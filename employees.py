@@ -92,7 +92,6 @@ class Employee(ABC):
     @abstractmethod
     def work(self):
         """Simulates 1 hour of work"""
-        pass
 
     def interact(self, other):
         """Simulates an interaction between this employee and another employee (other). """
