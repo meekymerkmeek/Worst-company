@@ -95,7 +95,7 @@ class Employee(ABC):
 
         if self.relationships[other.name] > RELATIONSHIP_THRESHOLD:
             self.happiness += 1
-        elif self.happiness >= HAPPINESS_THRESHOLD and other.happiness >= RELATIONSHIP_THRESHOLD:
+        elif self.happiness >= HAPPINESS_THRESHOLD and other.happiness >= HAPPINESS_THRESHOLD:
             self.relationships[other.name] += 1
         else:
             self.relationships[other.name] -= 1
