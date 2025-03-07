@@ -76,6 +76,7 @@ class Employee(ABC):
             self.__happiness = value
     @property
     def salary(self):
+        """Employee salary"""
         return self.__salary
 
     @salary.setter
@@ -85,10 +86,12 @@ class Employee(ABC):
         self.__salary = value
 
     @abstractmethod
+    """Simulates 1 hour of work"""
     def work(self):
         pass
 
     def interact(self, other):
+        """Simulates an interaction between this employee and another employee (other). """
         if other.name not in self.relationships:
             self.relationships[other.name] = 0
 
@@ -101,6 +104,7 @@ class Employee(ABC):
             self.happiness -= 1
 
     def daily_expense(self):
+        """Simulates the employee’s daily expenses by reducing their happiness and savings"""
         self.savings -= DAILY_EXPENSE
         self.happiness -= 1
 
