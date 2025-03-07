@@ -86,7 +86,6 @@ class Employee(ABC):
         self.__salary = value
 
     @abstractmethod
-    """Simulates 1 hour of work"""
     def work(self):
         pass
 
